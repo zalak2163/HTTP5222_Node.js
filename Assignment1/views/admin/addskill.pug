@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  .container
+    h1 Add Skill
+    form(action="/admin/add-skill" method="POST")
+      input(type="text" name="name" placeholder="Skill Name" required)
+      input(type="text" name="level" placeholder="Skill Level (e.g., Beginner, Intermediate, Expert)" required)
+      select(name="category" required)
+        option(value="" disabled selected) Select Category
+        option(value="programming") Programming
+        option(value="design") Design
+        option(value="marketing") Marketing
+        option(value="other") Other
+      textarea(name="description" placeholder="Skill Description" required) 
+      input(type="number" name="experience" placeholder="Years of Experience" min="0" required) 
+      button(type="submit") Add Skill

@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1 Skills
+  ul
+    each skill in skills
+      li
+        | #{skill.name} - Level: #{skill.level}
+  a(href="/admin/add-skill") Add New Skill
